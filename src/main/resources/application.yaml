@@ -3,14 +3,17 @@ spring:
     name: movie-flix-api
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/movieflix
-    username: postgres
-    password: postgres
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+    hibernate:
+      ddl-auto: validate
 
   flyway:
     enabled: true
+    locations: classpath:db/migration

@@ -29,6 +29,15 @@ public class CategoryService {
         return category.orElse(null);
     }
 
+    public Category updateById(Long id, Category category) {
+        return repository.findById(id)
+                .map(existing -> {
+                    category.setId(id);
+                    return repository.save(category);
+                })
+                .orElse(null);
+    }
+
     public void delete(Long id) {
         repository.deleteById(id);
     }

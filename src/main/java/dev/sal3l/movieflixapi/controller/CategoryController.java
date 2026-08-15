@@ -40,6 +40,13 @@ public class CategoryController {
         return mapper.map(created);
     }
 
+    @PutMapping("/{id}")
+    public CategoryResponse updateById(@PathVariable Long id, @RequestBody CategoryRequest request) {
+        Category entity = mapper.map(request);
+        Category updated = service.updateById(id, entity);
+        return mapper.map(updated);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id) {
         service.delete(id);

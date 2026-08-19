@@ -14,37 +14,35 @@ import java.util.List;
 public class CategoryController {
 
     private final CategoryService service;
-    private final CategoryMapper mapper;
 
-    public CategoryController(CategoryService service, CategoryMapper mapper) {
+    public CategoryController(CategoryService service) {
         this.service = service;
-        this.mapper = mapper;
     }
 
     @GetMapping("/")
     public List<CategoryResponse> findAll() {
         List<Category> categorylist = service.findAll();
-        return categorylist.stream().map(mapper::map).toList();
+        return categorylist.stream().map(CategoryMapper::map).toList();
     }
 
     @GetMapping("/{id}")
     public CategoryResponse findById(@PathVariable Long id) {
         Category entity = service.findById(id);
-        return mapper.map(entity);
+        return CategoryMapper.map(entity);
     }
 
     @PostMapping
     public CategoryResponse create(@RequestBody CategoryRequest request) {
-        Category entity = mapper.map(request);
+        Category entity = CategoryMapper.map(request);
         Category created = service.create(entity);
-        return mapper.map(created);
+        return CategoryMapper.map(created);
     }
 
     @PutMapping("/{id}")
     public CategoryResponse updateById(@PathVariable Long id, @RequestBody CategoryRequest request) {
-        Category entity = mapper.map(request);
+        Category entity = CategoryMapper.map(request);
         Category updated = service.updateById(id, entity);
-        return mapper.map(updated);
+        return CategoryMapper.map(updated);
     }
 
     @DeleteMapping("/{id}")

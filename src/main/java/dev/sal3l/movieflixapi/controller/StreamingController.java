@@ -14,37 +14,35 @@ import java.util.List;
 public class StreamingController {
 
     private final StreamingService service;
-    private final StreamingMapper mapper;
 
-    public StreamingController(StreamingService service, StreamingMapper mapper) {
+    public StreamingController(StreamingService service) {
         this.service = service;
-        this.mapper = mapper;
     }
 
     @GetMapping("/")
     public List<StreamingResponse> findAll() {
         List<Streaming> streaminglist = service.findAll();
-        return streaminglist.stream().map(mapper::map).toList();
+        return streaminglist.stream().map(StreamingMapper::map).toList();
     }
 
     @GetMapping("/{id}")
     public StreamingResponse findById(@PathVariable Long id) {
         Streaming entity = service.findById(id);
-        return mapper.map(entity);
+        return StreamingMapper.map(entity);
     }
 
     @PostMapping
     public StreamingResponse create(@RequestBody StreamingRequest request) {
-        Streaming entity = mapper.map(request);
+        Streaming entity = StreamingMapper.map(request);
         Streaming created = service.create(entity);
-        return mapper.map(created);
+        return StreamingMapper.map(created);
     }
 
     @PutMapping("/{id}")
     public StreamingResponse updateById(@PathVariable Long id, @RequestBody StreamingRequest request) {
-        Streaming entity = mapper.map(request);
+        Streaming entity = StreamingMapper.map(request);
         Streaming updated = service.updateById(id, entity);
-        return mapper.map(updated);
+        return StreamingMapper.map(updated);
     }
 
     @DeleteMapping("/{id}")

@@ -4,12 +4,22 @@ import dev.sal3l.movieflixapi.DTO.StreamingRequest;
 import dev.sal3l.movieflixapi.DTO.StreamingResponse;
 import dev.sal3l.movieflixapi.entity.Streaming;
 import org.mapstruct.Mapper;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
-public interface StreamingMapper {
+@Component
+public class StreamingMapper {
 
-    Streaming map(StreamingRequest request);
+    public static Streaming map(StreamingRequest request) {
+        return Streaming.builder()
+                .name(request.name())
+                .build();
+    }
 
-    StreamingResponse map(Streaming streaming);
-
+    public static StreamingResponse map(Streaming streaming) {
+        return StreamingResponse
+                .builder()
+                .id(streaming.getId())
+                .name(streaming.getName())
+                .build();
+    }
 }

@@ -3,13 +3,23 @@ package dev.sal3l.movieflixapi.mapper;
 import dev.sal3l.movieflixapi.DTO.CategoryRequest;
 import dev.sal3l.movieflixapi.DTO.CategoryResponse;
 import dev.sal3l.movieflixapi.entity.Category;
-import org.mapstruct.Mapper;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
-public interface CategoryMapper {
+@Component
+public class CategoryMapper {
 
-    Category map(CategoryRequest request);
+    public Category map(CategoryRequest request) {
+        return Category
+                .builder()
+                .name(request.name())
+                .build();
+    }
 
-    CategoryResponse map(Category category);
-
+    public CategoryResponse map(Category category) {
+        return CategoryResponse
+                .builder()
+                .id(category.getId())
+                .name(category.getName())
+                .build();
+    }
 }

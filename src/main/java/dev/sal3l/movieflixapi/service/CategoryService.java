@@ -20,6 +20,10 @@ public class CategoryService {
         return repository.findAll();
     }
 
+    public List<Category> findAllById(List<Long> categoriesIds) {
+        return repository.findAllById(categoriesIds);
+    }
+
     public Category create(Category category) {
         return repository.save(category);
     }

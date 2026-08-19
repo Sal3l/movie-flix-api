@@ -20,6 +20,10 @@ public class StreamingService {
         return repository.findAll();
     }
 
+    public List<Streaming> findAllById(List<Long> streamingIds) {
+        return repository.findAllById(streamingIds);
+    }
+
     public Streaming create(Streaming streaming) {
         return repository.save(streaming);
     }

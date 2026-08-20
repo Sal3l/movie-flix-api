@@ -3,7 +3,7 @@ CREATE TABLE movie (
     title varchar(255) NOT NULL,
     description TEXT,
     release_date DATE,
-    rating NUMERIC,
+    rating DOUBLE PRECISION,
     created_at TIMESTAMP,
     updated_at TIMESTAMP
 );

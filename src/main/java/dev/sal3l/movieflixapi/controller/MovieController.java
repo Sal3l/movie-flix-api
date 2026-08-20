@@ -14,39 +14,37 @@ import java.util.List;
 public class MovieController {
 
     private final MovieService service;
-    private final MovieMapper mapper;
 
-    public MovieController(MovieService service, MovieMapper mapper) {
+    public MovieController(MovieService service) {
         this.service = service;
-        this.mapper = mapper;
     }
 
     @GetMapping("/")
     public List<MovieResponse> findAll() {
         List<Movie> movies = service.findAll();
         return movies.stream()
-                .map(mapper::map)
+                .map(MovieMapper::map)
                 .toList();
     }
 
     @GetMapping("/{id}")
     public MovieResponse findById(@PathVariable Long id) {
         Movie movie = service.findById(id);
-        return mapper.map(movie);
+        return MovieMapper.map(movie);
     }
 
     @PostMapping("/")
     public MovieResponse create(@RequestBody MovieRequest request) {
-        Movie entity = mapper.map(request);
+        Movie entity = MovieMapper.map(request);
         Movie created = service.create(entity);
-        return mapper.map(created);
+        return MovieMapper.map(created);
     }
 
     @PutMapping("/{id}")
     public MovieResponse updateById(@PathVariable Long id, @RequestBody MovieRequest request) {
-        Movie entity = mapper.map(request);
+        Movie entity = MovieMapper.map(request);
         Movie updated = service.UpdateById(id, entity);
-        return mapper.map(updated);
+        return MovieMapper.map(updated);
     }
 
     @DeleteMapping("/{id}")

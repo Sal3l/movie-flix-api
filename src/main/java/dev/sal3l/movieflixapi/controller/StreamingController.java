@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/streaming")
+@RequestMapping("/streamings")
 public class StreamingController {
 
     private final StreamingService service;

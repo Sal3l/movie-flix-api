@@ -2,8 +2,11 @@ package dev.sal3l.movieflixapi.controller;
 
 import dev.sal3l.movieflixapi.DTO.CategoryRequest;
 import dev.sal3l.movieflixapi.DTO.CategoryResponse;
+import dev.sal3l.movieflixapi.DTO.MovieResponse;
 import dev.sal3l.movieflixapi.entity.Category;
+import dev.sal3l.movieflixapi.entity.Movie;
 import dev.sal3l.movieflixapi.mapper.CategoryMapper;
+import dev.sal3l.movieflixapi.mapper.MovieMapper;
 import dev.sal3l.movieflixapi.service.CategoryService;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +32,12 @@ public class CategoryController {
     public CategoryResponse findById(@PathVariable Long id) {
         Category entity = service.findById(id);
         return CategoryMapper.map(entity);
+    }
+
+    @GetMapping("/{id}/movies")
+    public List<MovieResponse> findMoviesByCategoryId(@PathVariable Long id) {
+        List<Movie> movieList = service.findMoviesByCategoryId(id);
+        return movieList.stream().map(MovieMapper::map).toList();
     }
 
     @PostMapping

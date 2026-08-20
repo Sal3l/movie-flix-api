@@ -1,0 +1,35 @@
+INSERT INTO movie
+(title, description, release_date, rating, created_at, updated_at)
+VALUES
+    ('Interestelar', 'Uma equipe viaja pelo espaço em busca de um novo lar para a humanidade.', '2014-11-07', 8.7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Senhor dos Anéis: A Sociedade do Anel', 'Um hobbit recebe a missão de destruir um poderoso anel.', '2001-12-19', 8.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Senhor dos Anéis: As Duas Torres', 'A Sociedade do Anel enfrenta novos perigos na Terra-média.', '2002-12-18', 8.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Senhor dos Anéis: O Retorno do Rei', 'A batalha final pela Terra-média se aproxima.', '2003-12-17', 9.0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Batman: O Cavaleiro das Trevas', 'Batman enfrenta o caos causado pelo Coringa.', '2008-07-18', 9.0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Matrix', 'Um homem descobre que a realidade é uma simulação.', '1999-03-31', 8.7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Inception', 'Especialistas invadem sonhos para manipular a mente.', '2010-07-16', 8.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Gladiador', 'Um general romano busca vingança após ser traído.', '2000-05-05', 8.5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Django Livre', 'Um escravo libertado parte para resgatar sua esposa.', '2012-12-25', 8.5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Os Infiltrados', 'Um policial infiltrado tenta descobrir outro infiltrado.', '2006-10-06', 8.5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Clube da Luta', 'Um homem cria um clube clandestino de luta.', '1999-10-15', 8.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Forrest Gump', 'Um homem simples participa de acontecimentos históricos.', '1994-07-06', 8.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Poderoso Chefão', 'A história de uma poderosa família mafiosa.', '1972-03-24', 9.2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Poderoso Chefão II', 'A história da família Corleone continua.', '1974-12-20', 9.0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Pulp Fiction', 'Histórias interligadas envolvendo criminosos de Los Angeles.', '1994-10-14', 8.9, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Silêncio dos Inocentes', 'Uma agente do FBI busca ajuda de um criminoso.', '1991-02-14', 8.6, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Iluminado', 'Um escritor começa a perder a sanidade em um hotel isolado.', '1980-05-23', 8.4, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Alien: O Oitavo Passageiro', 'Uma tripulação encontra uma criatura extraterrestre.', '1979-05-25', 8.5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Jurassic Park', 'Um parque de dinossauros geneticamente recriados sai do controle.', '1993-06-11', 8.2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Toy Story', 'Brinquedos ganham vida quando seus donos não estão por perto.', '1995-11-22', 8.3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Procurando Nemo', 'Um peixe atravessa o oceano procurando seu filho.', '2003-05-30', 8.2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Os Incríveis', 'Uma família de super-heróis enfrenta uma nova ameaça.', '2004-11-05', 8.0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Ratatouille', 'Um rato talentoso sonha em se tornar chef.', '2007-06-29', 8.1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Up: Altas Aventuras', 'Um idoso embarca em uma aventura com sua casa voadora.', '2009-05-29', 8.3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('O Diabo Veste Prada', 'Uma jovem começa a trabalhar para uma poderosa editora de moda.', '2006-06-30', 7.4, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('As Branquelas', 'Dois agentes precisam se disfarçar para solucionar um caso.', '2004-06-23', 5.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Se Beber, Não Case!', 'Três amigos tentam descobrir o que aconteceu em Las Vegas.', '2009-06-05', 7.7, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Todo Mundo em Pânico', 'Uma paródia de filmes clássicos de terror.', '2000-07-07', 6.2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Diário de uma Paixão', 'Um casal enfrenta diversos obstáculos para viver seu amor.', '2004-06-25', 7.8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('Mad Max: Estrada da Fúria', 'Uma perseguição atravessa um deserto pós-apocalíptico.', '2015-05-15', 8.1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+

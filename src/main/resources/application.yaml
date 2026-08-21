@@ -17,3 +17,7 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
+
+movie-flix-api:
+  security:
+    secret: ${SECRET}
